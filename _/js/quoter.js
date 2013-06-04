@@ -1,0 +1,14 @@
+var quotes = new Array;
+quotes.push("Make everyday an adventure.");
+quotes.push("Scouting makes life an adventure again.");
+quotes.push("10 bins, 4 planks of wood, 3m of rope and river full of crocodiles. Sounds like a normal Friday night.");
+quotes.push("You don't need to travel to the other side of the world to make a difference.");
+quotes.push("A few hours of your time can make years of difference.");
+quotes.push("The Outdoors - Discovered by Scouts since 1907.");
+quotes.push("Outdoors - Discovered by.....You?");
+quotes.push("Are you the parent of a future Chief Scout?");
+quotes.push("Clean? Where's the fun in that?!");
+quotes.push("S C O _ T - All that is missing is 'U'!");
+quotes.push("Today I realised I was one of 30 million.");
+quotes.push("Gain a million family members, Gain a billion great memories.");
+document.write(quotes[(Math.floor(Math.random() * quotes.length))]);
