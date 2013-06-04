@@ -13,6 +13,9 @@ function scoutit_setup() {
     
     // Add default posts and comments RSS feed links to <head>.
     add_theme_support( 'automatic-feed-links' );
+
+    // Enable admin to set custom background images in 'appearance > background'
+    add_custom_background();
     
     // Register new custom menus for header bar and each section
     add_action( 'init', 'register_my_menus' );
@@ -20,6 +23,7 @@ function scoutit_setup() {
         register_nav_menus(
             array(
                 'custom_menu' => __( 'Main Menu' ),
+                'header_menu' => __( 'Menu in header Area' ),
                 'beavers_menu' => __( 'Menu on Beavers pages' ),
                 'cubs_menu' => __( 'Menu on Cubs pages' ),
                 'scouts_menu' => __( 'Menu on Scouts pages' ),
@@ -35,10 +39,10 @@ function scoutit_setup() {
     add_theme_support( 'post-thumbnails' );
     
     // Register support for custom header images
-    define( 'HEADER_IMAGE_WIDTH', apply_filters( 'twentyeleven_header_image_width', 228 ) );
-    define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'twentyeleven_header_image_height', 125 ) );
+    define( 'HEADER_IMAGE_WIDTH', apply_filters( 'twentyeleven_header_image_width', 111 ) );
+    define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'twentyeleven_header_image_height', 150 ) );
     define( 'HEADER_TEXTCOLOR', 'ffffff' );
-    define( 'HEADER_IMAGE', '%s/_/img/logo.png' ); // %s is the template dir uri
+    define( 'HEADER_IMAGE', '%s/_/img/SI_logoHeader.jpg' ); // %s is the template dir uri 
     add_custom_image_header( 'twentyeleven_header_style', 'twentyeleven_admin_header_style', 'twentyeleven_admin_header_image' );
     
     

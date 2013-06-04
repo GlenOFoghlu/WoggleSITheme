@@ -140,7 +140,6 @@ a:hover {
 
 #social {
 	float: right;
-	width: 500px;
 	padding-top: 5px;
 	padding-right: 5px;
 	text-align: right;
@@ -170,9 +169,28 @@ a:hover {
 
 #logo {
 	float: left;
-	width: 208px;
-	height: 125px;
+	height: 150px;
 }
+#groupName{
+	font-size: xx-large;
+}
+/*headerMenu*/
+#headerMenu ul {margin: 0; padding: 0; 
+	list-style-type: none; list-style-image: none; }
+#headerMenu ul {margin: 0; padding: 0; 
+	list-style-type: none; list-style-image: none; }
+#headerMenu li {display: inline; }
+#headerMenu ul {margin: 0; padding: 0; 
+	list-style-type: none; list-style-image: none; }
+#headerMenu li {float: right;display: inline;  padding: 0px 5px 0px;}
+#headerMenu a {text-decoration:none; }
+#headerMenu a:hover {color: purple; }
+#headerMenu ul {margin: 0; padding: 0; 
+	list-style-type: none; list-style-image: none; }
+#headerMenu li {display: inline; }
+#headerMenu ul li a {text-decoration:none; }
+#headerMenu ul li a:hover {color: purple;
+	background: yellow; }
 
 .navigation {
 	width: 1000px;
@@ -194,15 +212,15 @@ a:hover {
 }
 
 .navigation ul{
-height: 34px;
-line-height: 34px;
+height: 50px;
+line-height: 50px;
 list-style: none;
 margin: 0;
 padding: 0;
 }
 
 .navigation li{
-float: left;
+float: right;
 padding: 0px;
 }
 
@@ -212,7 +230,6 @@ display: block;
 font-weight: bold;
 line-height: 34px;
 margin: 0px;
-padding: 0px 20px;
 text-align: center;
 text-decoration: none;
 }
@@ -260,13 +277,12 @@ height: 34px;
 font-size: 16px;
 font-style: normal;
 margin: 0px;
-padding: 0px 10px 0px 15px;
 text-align: left;
 }
 
 .navigation li ul a:hover,
 .navigation li ul li:hover a{
-background-color: #522e91;
+/*background-color: #522e91;*/
 color: #ffffff;
 border: 0px;
 text-decoration: none;
@@ -439,14 +455,6 @@ text-decoration: none;
 .sidebar-purple-box-content a:hover {
     text-decoration: underline;
 }
-
-
-
-
-
-
-
-
 
 .sidebar-box-menu ul a {
 	color: #ffffff;
