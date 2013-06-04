@@ -152,13 +152,6 @@ a:hover {
 	width: 468px;
 }
 
-#ceop {
-	float: left;
-	width: 143px;
-	height: 51px;
-	text-align: left;
-}
-
 #main-wrapper {
 	width: 1000px;
 	margin-left: auto;
@@ -591,11 +584,11 @@ input, textarea {
 	color: white;
 	border-top: solid 0px #CCC;
 	padding: 15px 20px 15px 20px;
-	text-align: right;
-	margin: 0 auto;
+	margin-top: 15px;
 	display: block;
 	overflow: hidden;
 	font-size: 11px;
+	border-style:solid;
 }
 
 #footer a {
@@ -605,7 +598,21 @@ input, textarea {
 #footer a:hover {
 	text-decoration: underline;
 }
+#copyright{
+	text-align: center;
+}
+#SIFooter {
+	float: left;	
+}
+#groupInfoFooter{
+	float: right;
+    text-align: right;
 
+}
+#legal{
+	clear:both;
+ 	text-align: center;
+}
 #ssbar {
 	border-radius: 10px;
 	width: 1000px;
