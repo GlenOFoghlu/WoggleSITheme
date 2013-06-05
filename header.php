@@ -49,21 +49,27 @@
 </head>
 <body <?php body_class(); ?>>
 <div id="main-wrapper">
-    <div id="header">
-         <div id="headerMenu"><?php wp_nav_menu(array('theme_location' => 'header_menu')); ?></div>
-            <div id="logo">
+<div id="header">
+        <div id="headerMenu"><?php wp_nav_menu(array('theme_location' => 'header_menu')); ?></div>
+         <div id="logo">
                     <a href="/"><img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="<?php bloginfo( 'name' ); ?>" /></a>
             </div>
-                <div id="groupName"><?php bloginfo( 'name' ); ?>
+                <div id="groupName"><a href="/"><?php bloginfo( 'name' ); ?></a>
             </div> 
-                <br/><br/><br/>
-        <div class="navigation">
-            <?php wp_nav_menu(array('theme_location' => 'custom_menu')); ?>
-        </div>
-        <div class="clear" style="padding-top:10px;"></div>
-        <div id='middle'>
-            <div id='join'><img src="<?php bloginfo('template_directory'); ?>/_/img/breadcrumb_jointheadventure.gif" width="125" height="30" alt="Join the adventure!" /></div>
-            <div id='search'><?php get_search_form(); ?></div>
-        </div>
-    </div>
+        <br /><br /><br />
+<!-- TO DO: finish Advertising widget
+<div id="adheader">
+<a href="#" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/_/img/banner.gif" width="468" height="60" border="0"  /></a>
+</div>
+-->
+</div>
+<div class="clear" style="padding-top:10px;"></div>
+<div class="navigation">
+<?php wp_nav_menu(array('theme_location' => 'custom_menu')); ?>
+</div>
+<div class="clear" style="padding-top:10px;"></div>
+<div id='middle'>
+<div id='join'><img src="<?php bloginfo('template_directory'); ?>/_/img/breadcrumb_jointheadventure.gif" width="125" height="30" alt="Join the adventure!" /></div>
+<div id='search'><?php get_search_form(); ?></div>
+</div>
 <div class="clear" style="padding-top:10px;"></div>

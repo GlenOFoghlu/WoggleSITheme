@@ -144,13 +144,6 @@ a:hover {
 	padding-right: 5px;
 	text-align: right;
 }
-
-#adheader {
-	float: right;
-	height: 60px;
-	width: 468px;
-}
-
 #main-wrapper {
 	width: 1000px;
 	margin-left: auto;
@@ -174,6 +167,10 @@ a:hover {
 #groupName{
 	font-size: xx-large;
 }
+#groupName a:hover {
+	text-decoration:none;
+}
+	
 /*headerMenu*/
 #headerMenu ul {margin: 0; padding: 0; 
 	list-style-type: none; list-style-image: none; }
@@ -194,13 +191,13 @@ a:hover {
 
 .navigation {
 	width: 1000px;
-	height: 34px;
+	height: 42px;
 	line-height: 34px;
 	margin-left: auto;
 	margin-right: auto;
-	border-top: dashed 1px #E0E0E0 ;
-	border-bottom: dashed 1px #E0E0E0 ;
-	font-size: 16px;
+	/*border-top: dashed 1px #E0E0E0 ;
+	border-bottom: dashed 1px #E0E0E0 ;*/
+	
 }
 
 .drop_down {
@@ -213,7 +210,7 @@ a:hover {
 
 .navigation ul{
 height: 50px;
-line-height: 50px;
+line-height: 40px;
 list-style: none;
 margin: 0;
 padding: 0;
@@ -221,14 +218,15 @@ padding: 0;
 
 .navigation li{
 float: right;
+
 padding: 0px;
 }
 
 .navigation li a{
-color: #522e91;
+color: rgba(0, 0, 0, 0);
 display: block;
 font-weight: bold;
-line-height: 34px;
+line-height: 42px;
 margin: 0px;
 text-align: center;
 text-decoration: none;
@@ -274,7 +272,7 @@ background: none;
 .navigation li ul a{
 display: block;
 height: 34px;
-font-size: 16px;
+font-size: 10px;
 font-style: normal;
 margin: 0px;
 text-align: left;
@@ -287,6 +285,34 @@ color: #ffffff;
 border: 0px;
 text-decoration: none;
 }
+
+/* Custom Menu Tabs */
+.one {
+	background: url(_/img/darkOneSmall.png) bottom center no-repeat;
+	width:212px;
+}
+.beaver {
+	background: url(_/img/beaverSection.png) bottom center no-repeat;
+	width:194px;
+}
+.cub {
+	background: url(_/img/cubSection.png) bottom center no-repeat;
+	width:145px;
+}
+.scout {
+	background: url(_/img/scoutSection.png) bottom center no-repeat;
+	width:145px;
+}
+.rover {
+	background: url(_/img/roverSection.png) bottom center no-repeat;
+	width:160px;
+}
+.venture {
+	background: url(_/img/ventureSection.png) bottom center no-repeat;
+	width:142px;
+}
+
+
 
 #middle {
 	width: 1000px;
