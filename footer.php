@@ -14,7 +14,7 @@
 	<div id="groupInfoFooter">
 		<?php echo $options['group_name']; ?><br/>
 		<?php if ($options['group_address']!='') { echo $options['group_address'].'<br/>'; } ?>
-		<?php if ($options['group_charity']!='') { echo 'Registered Charity: <a href="#'.$options['group_charity'].'" target="_blank">'.$options['group_charity'].'</a><br/>'; } ?>
+		<?php if ($options['group_county']!='') { echo $options['group_county'].' Scout County'.'<br/>'; } ?>
 	</div>
 </div>
 	<div id="legal">

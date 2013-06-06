@@ -50,13 +50,26 @@
 <body <?php body_class(); ?>>
 <div id="main-wrapper">
 <div id="header">
-        <div id="headerMenu"><?php wp_nav_menu(array('theme_location' => 'header_menu')); ?></div>
+        <div id="headerMenu"><?php wp_nav_menu(array('theme_location' => 'header_menu')); ?></div></br/>
+        <div id="social">
+            <?php $options = get_option( 'scout_theme_options' ); ?>
+            <?php if ( $options['twitterUrl'] != '' ) : ?>
+                <div id="twitter"><h5><a href="<?php echo $options['twitterUrl']; ?>" title="<?php bloginfo('name')?> <?php _e('on','photologger');?> <?php _e( 'Twitter', 'photologger' ); ?>"><span><?php _e( 'Twitter', 'photologger' ); ?></span></a></h5></div>
+            <?php endif; ?>
+            <?php if ( $options['facebookUrl'] != '' ) : ?>
+             <div id="facebook"><h5><a href="<?php echo $options['facebookUrl']; ?>" title="<?php bloginfo('name')?> <?php _e('on','photologger');?> <?php _e( 'Facebook', 'photologger' ); ?>"><span><?php _e( 'Facebook', 'photologger' ); ?></span></a></h5></div>
+            <?php endif; ?>
+            <?php if ( $options['youtubeUrl'] != '' ) : ?>
+                <div id="youtube"><h5><a href="<?php echo $options['youtubeUrl']; ?>" title="<?php bloginfo('name')?> <?php _e('on','photologger');?> <?php _e( 'Youtube', 'photologger' ); ?>"><span><?php _e( 'Youtube', 'photologger' ); ?></span></a></h5></div>
+            <?php endif; ?>
+         </div>
          <div id="logo">
                     <a href="/"><img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="<?php bloginfo( 'name' ); ?>" /></a>
             </div>
                 <div id="groupName"><a href="/"><?php bloginfo( 'name' ); ?></a>
+                    <h1><a href="<?php echo site_Url()?>" title="<?php bloginfo('name')?>"><?php bloginfo('name')?></a></h1>
             </div> 
-        <br /><br /><br />
+        <br /><br /><br />        
 <!-- TO DO: finish Advertising widget
 <div id="adheader">
 <a href="#" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/_/img/banner.gif" width="468" height="60" border="0"  /></a>

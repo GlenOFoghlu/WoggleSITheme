@@ -43,7 +43,6 @@ abbr,acronym { border:0; }
 hr { display: none; }
 address{ display: inline; }
 
-
 blockquote {
 	margin: 1em 3em;
 	color: #555;
@@ -137,13 +136,6 @@ a:hover {
 .hide {
 	display: none;
 }
-
-#social {
-	float: right;
-	padding-top: 5px;
-	padding-right: 5px;
-	text-align: right;
-}
 #main-wrapper {
 	width: 1000px;
 	margin-left: auto;
@@ -188,6 +180,63 @@ a:hover {
 #headerMenu ul li a {text-decoration:none; }
 #headerMenu ul li a:hover {color: purple;
 	background: yellow; }
+
+#social {
+	float: right;
+	
+	text-align: right;
+}
+
+#twitter,#facebook,#youtube {
+width:32px;
+float:left;
+position:relative;
+height:32px;
+display:block;
+margin:0 0 7px 7px;
+}
+
+#twitter h5,#youtube h5,#facebook h5 {
+float:left;
+clear:both;
+height:32px;
+width:32px;
+margin:0;
+padding:0;
+}
+
+#twitter h5 a:hover,#youtube h5 a:hover,#facebook h5 a:hover {
+display:block;
+height:32px;
+width:32px;
+background-position:-32px 0;
+text-decoration: none;
+}
+
+#twitter h5 span,#youtube h5 span,#facebook h5 span {
+display:none;
+}
+
+#twitter h5 a {
+display:block;
+height:32px;
+width:32px;
+background:url(_/img/social/twitter.png) top left no-repeat;
+}
+
+#youtube h5 a {
+display:block;
+height:32px;
+width:32px;
+background:url(_/img/social/youtube.png) top left no-repeat;
+}
+
+#facebook h5 a {
+display:block;
+height:32px;
+width:32px;
+background:url(_/img/social/facebook.png) top left no-repeat;
+}
 
 .navigation {
 	width: 1000px;

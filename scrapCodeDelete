@@ -1,1 +1,21 @@
 <img src="../wp-content/themes/WoggleSITheme/_/img/darkOneNew.png" />
+
+<a class="twitter-timeline" href="https://twitter.com/ScoutingIreland" data-widget-id="342040461659234304">Tweets by @ScoutingIreland</a>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+</script>
+
+
+ <tr valign="top"><th scope="row">Show Twitter widget</th>
+                    <td>
+                        <input id="scout_theme_options[option_show_twitter]" name="scout_theme_options[option_show_twitter]" type="checkbox" value="1" <?php checked( '1', $options['option_show_twitter'] ); ?> />
+                        <label class="description" for="scout_theme_options[option_show_twitter]">(Will replace Homepage Sidebar 1)</label>
+                    </td>
+                </tr>
+                <tr valign="top"><th scope="row">Twitter username</th>
+                    <td>
+                        <input id="scout_theme_options[twitter_username]" class="regular-text" type="text" name="scout_theme_options[twitter_username]" value="<?php esc_attr_e( $options['twitter_username'] ); ?>" />
+                        <label class="description" for="scout_theme_options[twitter_username]"></label>
+                    </td>
+                </tr>
