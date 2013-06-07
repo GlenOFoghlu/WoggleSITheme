@@ -7,14 +7,14 @@ add_action( 'admin_menu', 'theme_options_add_page' );
  * Init plugin options to white list our options
  */
 function theme_options_init(){
-	register_setting( 'scout_options', 'scout_theme_options', 'theme_options_validate' );
+	register_setting( 'WoggleSITheme_options', 'WoggleSITheme_theme_options', 'theme_options_validate' );
 }
 
 /**
  * Load up the menu page
  */
 function theme_options_add_page() {
-	add_theme_page( __( 'Theme Options', 'scout-theme' ), __( 'Theme Options', 'scout-theme' ), 'edit_theme_options', 'theme_options', 'theme_options_do_page' );
+	add_theme_page( __( 'Theme Options', 'WoggleSITheme-theme' ), __( 'Theme Options', 'WoggleSITheme-theme' ), 'edit_theme_options', 'theme_options', 'theme_options_do_page' );
 }
 
 /**
@@ -28,93 +28,105 @@ function theme_options_do_page() {
 
 	?>
 	<div class="wrap">
-		<?php screen_icon(); echo "<h2>" . get_current_theme() . __( ' Theme Options', 'scout-theme' ) . "</h2>"; ?>
+		<?php screen_icon(); echo "<h2>" . get_current_theme() . __( ' Theme Options', 'WoggleSITheme-theme' ) . "</h2>"; ?>
 
 		<?php if ( false !== $_REQUEST['settings-updated'] ) : ?>
 
-		<div class="updated fade"><p><strong><?php _e( 'Options saved', 'scout-theme' ); ?></strong></p></div>
+		<div class="updated fade"><p><strong><?php _e( 'Options saved', 'WoggleSITheme-theme' ); ?></strong></p></div>
 		<?php endif; ?>
 
 		<form method="post" action="options.php">
-			<?php settings_fields( 'scout_options' ); ?>
-			<?php $options = get_option( 'scout_theme_options' ); ?>
+			<?php settings_fields( 'WoggleSITheme_options' ); ?>
+			<?php $options = get_option( 'WoggleSITheme_theme_options' ); ?>
 
 			<table class="form-table">
                 <tr><th colspan="2"><h2>Theme Setup</h2></th></tr>
                 <tr valign="top"><th scope="row">Group Name</th>
                     <td>
-                        <input id="scout_theme_options[group_name]" class="regular-text" type="text" name="scout_theme_options[group_name]" value="<?php esc_attr_e( $options['group_name'] ); ?>" />
-                        <label class="description" for="scout_theme_options[group_name]"> e.g. "132nd Bayside Scout Group"</label>
+                        <input id="WoggleSITheme_theme_options[group_name]" class="regular-text" type="text" name="WoggleSITheme_theme_options[group_name]" value="<?php esc_attr_e( $options['group_name'] ); ?>" />
+                        <label class="description" for="WoggleSITheme_theme_options[group_name]"> e.g. "132nd Bayside Scout Group"</label>
                     </td>
                 </tr>
                 <tr valign="top"><th scope="row">Address</th>
                     <td>
-                        <input id="scout_theme_options[group_address]" class="regular-text" type="text" name="scout_theme_options[group_address]" value="<?php esc_attr_e( $options['group_address'] ); ?>" />
-                        <label class="description" for="scout_theme_options[group_address]">e.g. "Bayside , Co Dublin"</label>
+                        <input id="WoggleSITheme_theme_options[group_address]" class="regular-text" type="text" name="WoggleSITheme_theme_options[group_address]" value="<?php esc_attr_e( $options['group_address'] ); ?>" />
+                        <label class="description" for="WoggleSITheme_theme_options[group_address]">e.g. "Bayside , Co Dublin"</label>
                     </td>
                 </tr>
-                <tr valign="top"><th scope="row">Scout County</th>
+                <tr valign="top"><th scope="row">WoggleSITheme County</th>
                     <td>
-                        <input id="scout_theme_options[group_county]" class="regular-text" type="text" name="scout_theme_options[group_county]" value="<?php esc_attr_e( $options['group_county'] ); ?>" />
-                        <label class="description" for="scout_theme_options[group_county]"> e.g. "Reachra"</label>
+                        <input id="WoggleSITheme_theme_options[group_county]" class="regular-text" type="text" name="WoggleSITheme_theme_options[group_county]" value="<?php esc_attr_e( $options['group_county'] ); ?>" />
+                        <label class="description" for="WoggleSITheme_theme_options[group_county]"> e.g. "Reachra"</label>
                     </td>
                 </tr>
                 <tr><th colspan="2"><h2>Social Media</h2></th></tr>
                 <tr valign="top"><th scope="row">Facebook Profile</th>
                     <td>
-                        <input id="scout_theme_options[facebookUrl]" class="regular-text" type="text" name="scout_theme_options[facebookUrl]" value="<?php echo esc_Url( $options['facebookUrl'] ); ?>" />
-                        <label class="description" for="scout_theme_options[facebookUrl]"><?php _e( 'Leave blank to hide Facebook Icon', 'scout-theme' ); ?></label>
+                        <input id="WoggleSITheme_theme_options[facebookUrl]" class="regular-text" type="text" name="WoggleSITheme_theme_options[facebookUrl]" value="<?php echo esc_Url( $options['facebookUrl'] ); ?>" />
+                        <label class="description" for="WoggleSITheme_theme_options[facebookUrl]"><?php _e( 'Leave blank to hide Facebook Icon', 'WoggleSITheme-theme' ); ?></label>
                     </td>
                 </tr> 
                 <tr valign="top"><th scope="row">Twitter Account</th>
                     <td>
-                        <input id="scout_theme_options[twitterUrl]" class="regular-text" type="text" name="scout_theme_options[twitterUrl]" value="<?php echo esc_Url( $options['twitterUrl'] ); ?>" />
-                        <label class="description" for="scout_theme_options[twitterUrl]"><?php _e( 'Leave blank to hide Twitter Icon', 'scout-theme' ); ?></label>
+                        <input id="WoggleSITheme_theme_options[twitterUrl]" class="regular-text" type="text" name="WoggleSITheme_theme_options[twitterUrl]" value="<?php echo esc_Url( $options['twitterUrl'] ); ?>" />
+                        <label class="description" for="WoggleSITheme_theme_options[twitterUrl]"><?php _e( 'Leave blank to hide Twitter Icon', 'WoggleSITheme-theme' ); ?></label>
                     </td>
                 </tr>
                 
                 <tr valign="top"><th scope="row">Youtube Channel</th>
                     <td>
-                        <input id="scout_theme_options[youtubeUrl]" class="regular-text" type="text" name="scout_theme_options[youtubeUrl]" value="<?php echo esc_Url( $options['youtubeUrl'] ); ?>" />
-                        <label class="description" for="scout_theme_options[youtubeUrl]"><?php _e( 'Leave blank to hide Youtube Icon', 'scout-theme' ); ?></label>
+                        <input id="WoggleSITheme_theme_options[youtubeUrl]" class="regular-text" type="text" name="WoggleSITheme_theme_options[youtubeUrl]" value="<?php echo esc_Url( $options['youtubeUrl'] ); ?>" />
+                        <label class="description" for="WoggleSITheme_theme_options[youtubeUrl]"><?php _e( 'Leave blank to hide Youtube Icon', 'WoggleSITheme-theme' ); ?></label>
                     </td>
                 </tr>
                <!--  <tr valign="top"><th scope="row">Email</th>
                     <td>
-                        <input id="scout_theme_options[emailUrl]" class="regular-text" type="text" name="scout_theme_options[emailUrl]" value="<?php echo esc_Url( $options['emailUrl'] ); ?>" />
-                        <label class="description" for="scout_theme_options[emailUrl]"><?php _e( 'Leave blank to hide Email Icon', 'scout-theme' ); ?></label>
+                        <input id="WoggleSITheme_theme_options[emailUrl]" class="regular-text" type="text" name="WoggleSITheme_theme_options[emailUrl]" value="<?php echo esc_Url( $options['emailUrl'] ); ?>" />
+                        <label class="description" for="WoggleSITheme_theme_options[emailUrl]"><?php _e( 'Leave blank to hide Email Icon', 'WoggleSITheme-theme' ); ?></label>
                     </td>
                 </tr>  -->
+
+                 <tr valign="top"><th scope="row">Show Twitter widget</th>
+                    <td>
+                        <input id="WoggleSITheme_theme_options[option_show_twitter]" name="WoggleSITheme_theme_options[option_show_twitter]" type="checkbox" value="1" <?php checked( '1', $options['option_show_twitter'] ); ?> />
+                        <label class="description" for="WoggleSITheme_theme_options[option_show_twitter]">(Will replace Homepage Sidebar 1)</label>
+                    </td>
+                </tr>
+                <tr valign="top"><th scope="row">Twitter username</th>
+                    <td>
+                        <input id="WoggleSITheme_theme_options[twitter_username]" class="regular-text" type="text" name="WoggleSITheme_theme_options[twitter_username]" value="<?php esc_attr_e( $options['twitter_username'] ); ?>" />
+                        <label class="description" for="WoggleSITheme_theme_options[twitter_username]"></label>
+                    </td>
+                </tr>
                 <tr><th colspan="2"><h2>Homepage</h2></th></tr>
                 <tr valign="top"><th scope="row">Show homepage message</th>
                     <td>
-                        <input id="scout_theme_options[option_show_home_msg]" name="scout_theme_options[option_show_home_msg]" type="checkbox" value="1" <?php checked( '1', $options['option_show_home_msg'] ); ?> />
-                        <label class="description" for="scout_theme_options[option_show_home_msg]"></label>
+                        <input id="WoggleSITheme_theme_options[option_show_home_msg]" name="WoggleSITheme_theme_options[option_show_home_msg]" type="checkbox" value="1" <?php checked( '1', $options['option_show_home_msg'] ); ?> />
+                        <label class="description" for="WoggleSITheme_theme_options[option_show_home_msg]"></label>
                     </td>
                 </tr>
                 <tr valign="top"><th scope="row">Homepage title</th>
                     <td>
-                        <input id="scout_theme_options[home_title]" class="regular-text" type="text" name="scout_theme_options[home_title]" value="<?php esc_attr_e( $options['home_title'] ); ?>" />
-                        <label class="description" for="scout_theme_options[home_title]"></label>
+                        <input id="WoggleSITheme_theme_options[home_title]" class="regular-text" type="text" name="WoggleSITheme_theme_options[home_title]" value="<?php esc_attr_e( $options['home_title'] ); ?>" />
+                        <label class="description" for="WoggleSITheme_theme_options[home_title]"></label>
                     </td>
                 </tr>
                 <tr valign="top"><th scope="row">Welcome message</th>
                     <td>
-                        <textarea id="scout_theme_options[home_message]" class="large-text" cols="50" rows="5" name="scout_theme_options[home_message]"><?php echo esc_textarea( $options['home_message'] ); ?></textarea>
-                        <label class="description" for="scout_theme_options[home_message]">Will be wrapped in a &lt;p&gt; tag.</label>
+                        <textarea id="WoggleSITheme_theme_options[home_message]" class="large-text" cols="50" rows="5" name="WoggleSITheme_theme_options[home_message]"><?php echo esc_textarea( $options['home_message'] ); ?></textarea>
+                        <label class="description" for="WoggleSITheme_theme_options[home_message]">Will be wrapped in a &lt;p&gt; tag.</label>
                     </td>
                 </tr>
-              
                 <tr><th colspan="2"><h2>Discussion override</h2></th></tr>
                 <tr valign="top"><th scope="row">Turn off comments</th>
                     <td>
-                        <input id="scout_theme_options[no_comment]" name="scout_theme_options[no_comment]" type="checkbox" value="1" <?php checked( '1', $options['no_comment'] ); ?> />
-                        <label class="description" for="scout_theme_options[no_comment]">Over-ride WordPress and switch off comments from posts. Optional.</label>
+                        <input id="WoggleSITheme_theme_options[no_comment]" name="WoggleSITheme_theme_options[no_comment]" type="checkbox" value="1" <?php checked( '1', $options['no_comment'] ); ?> />
+                        <label class="description" for="WoggleSITheme_theme_options[no_comment]">Over-ride WordPress and switch off comments from posts. Optional.</label>
                     </td>
                 </tr>   
             </table>      
 			<p class="submit">
-				<input type="submit" class="button-primary" value="<?php _e( 'Save Options', 'scout-theme' ); ?>" />
+				<input type="submit" class="button-primary" value="<?php _e( 'Save Options', 'WoggleSITheme-theme' ); ?>" />
 			</p>
 		</form>
 	</div>
