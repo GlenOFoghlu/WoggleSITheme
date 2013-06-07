@@ -44,9 +44,10 @@
             if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
               $imgID = get_post_thumbnail_id( $post_id );
               $image_attributes = wp_get_attachment_image_src( $imgID, 'large' ); // returns an array
-              echo '<img src="/wp-content/themes/scoutit/_/inc/timthumb.php?src='.$image_attributes[0].'&w=453&h=250" width="453" height="250" alt="'.get_the_title().'" />';
+              echo '<img src="'.$image_attributes[0].'" width="453" height="250" alt="'.get_the_title().'" />'; 
+              // echo '<img src="/wp-content/themes/WoggleSITheme/_/inc/timthumb.php?src='.$image_attributes[0].'&w=453&h=250" width="453" height="250" alt="'.get_the_title().'" />';
             } else {
-              echo '<img src="/wp-content/themes/scoutit/_/img/no-image.gif" width="453" height="250" />';  
+              echo '<img src="/wp-content/themes/WoggleSITheme/_/img/no-image.gif" width="453" height="250" />';  
             }
             ?>
                 <div class="info" >
@@ -61,6 +62,7 @@
 
 <?php 
 // Shows homepage message if switched on in theme options
+$options = get_option( 'WoggleSITheme_theme_options' );
 if ($options['option_show_home_msg']) { 
     echo '<h1>'.$options['home_title'].'</h1>
     <p>'.$options['home_message'].'</p>';

@@ -1,11 +1,12 @@
 <?php
 
 
-add_action( 'after_setup_theme', 'scoutit_setup' );
+add_action( 'after_setup_theme', 'WoggleSITheme_setup' );
+//get_template_part('nhp', 'options');
 
-if ( ! function_exists( 'scoutit_setup' ) ):
+if ( ! function_exists( 'WoggleSITheme_setup' ) ):
 
-function scoutit_setup() {
+function WoggleSITheme_setup() {
     
     // Register Theme Options page
     require_once ( get_template_directory() . '/theme-options.php' );
@@ -78,7 +79,7 @@ function scoutit_setup() {
        
 }
 
-endif; // scoutit_setup 
+endif; // WoggleSITheme_setup 
 $options = get_option('scout_theme_options');
 
 // Get category ID from name
@@ -88,12 +89,12 @@ function get_category_id($cat_name){
 }
 
 // Register sidebars
-function scoutit_widgets_init() {
+function WoggleSITheme_widgets_init() {
     
     register_sidebar(array(
-        'name' => __('Purple Sidebar Widgets','scoutit' ),
+        'name' => __('Purple Sidebar Widgets','WoggleSITheme' ),
         'id'   => 'purple-sidebar',
-        'description'   => __( '','scoutit' ),
+        'description'   => __( '','WoggleSITheme' ),
         'before_widget' => '<div class="widget-box w-purple">',
         'after_widget'  => '</div>',
         'before_title'  => '<div class="widget-box-title">',
@@ -101,9 +102,9 @@ function scoutit_widgets_init() {
     ));
     
     register_sidebar(array(
-        'name' => __('Orange Sidebar Widgets','scoutit' ),
+        'name' => __('Orange Sidebar Widgets','WoggleSITheme' ),
         'id'   => 'orange-sidebar',
-        'description'   => __( '','scoutit' ),
+        'description'   => __( '','WoggleSITheme' ),
         'before_widget' => '<div class="widget-box w-orange">',
         'after_widget'  => '</div>',
         'before_title'  => '<div class="widget-box-title">',
@@ -111,9 +112,9 @@ function scoutit_widgets_init() {
     ));
     
     register_sidebar(array( 
-        'name' => __('Green Sidebar Widgets','scoutit' ),
+        'name' => __('Green Sidebar Widgets','WoggleSITheme' ),
         'id'   => 'green-sidebar',
-        'description'   => __( '','scoutit' ),
+        'description'   => __( '','WoggleSITheme' ),
         'before_widget' => '<div class="widget-box w-green">',
         'after_widget'  => '</div>',
         'before_title'  => '<div class="widget-box-title">',
@@ -121,9 +122,9 @@ function scoutit_widgets_init() {
     ));
     
     register_sidebar(array(
-        'name' => __('Homepage Sidebar 1','scoutit' ),
+        'name' => __('Homepage Sidebar 1','WoggleSITheme' ),
         'id'   => 'home-sidebar-1',
-        'description'   => __( 'If you use Twitter, this box will be replaced with the Twitter widget.','scoutit' ),
+        'description'   => __( 'If you use Twitter, this box will be replaced with the Twitter widget.','WoggleSITheme' ),
         'before_widget' => '<div class="sidebar-box">',
         'after_widget'  => '</div></div><div class="clear" style="padding-top:10px;"></div>',
         'before_title'  => '<div class="sidebar-purple-box-title">',
@@ -131,9 +132,9 @@ function scoutit_widgets_init() {
     ));
     
     register_sidebar(array(
-        'name' => __('Homepage Sidebar 2','scoutit' ),
+        'name' => __('Homepage Sidebar 2','WoggleSITheme' ),
         'id'   => 'home-sidebar-2',
-        'description'   => __( 'If you are connected to OSM, leave this box empty to show a list of future events.','scoutit' ),
+        'description'   => __( 'If you are connected to OSM, leave this box empty to show a list of future events.','WoggleSITheme' ),
         'before_widget' => '<div class="sidebar-box">',
         'after_widget'  => '</div></div><div class="clear" style="padding-top:10px;"></div>',
         'before_title'  => '<div class="sidebar-orange-box-title">',
@@ -141,7 +142,7 @@ function scoutit_widgets_init() {
     ));
     
 }
-add_action( 'widgets_init', 'scoutit_widgets_init' );
+add_action( 'widgets_init', 'WoggleSITheme_widgets_init' );
 
 if ( ! function_exists( 'twentyeleven_header_style' ) ) :
 function twentyeleven_header_style() {
@@ -265,12 +266,12 @@ add_action('wp_enqueue_scripts', 'my_scripts_method');
 // Custom widgets for rest of document
 
 // Custom Recent Posts Widget
-class scoutIT_Widget_Recent_Posts extends WP_Widget {
+class WoggleSITheme_Widget_Recent_Posts extends WP_Widget {
 
     function __construct() {
-        $widget_ops = array('classname' => 'scoutit_widget_recent_entries', 'description' => __( "Nice tidy way of adding recent posts to your sidebar (purple one is best).") );
-        parent::__construct('scoutit-recent-posts', __('SCOUT Recent Posts'), $widget_ops);
-        $this->alt_option_name = 'scoutit_widget_recent_entries';
+        $widget_ops = array('classname' => 'WoggleSITheme_widget_recent_entries', 'description' => __( "Nice tidy way of adding recent posts to your sidebar (purple one is best).") );
+        parent::__construct('WoggleSITheme-recent-posts', __('SCOUT Recent Posts'), $widget_ops);
+        $this->alt_option_name = 'WoggleSITheme_widget_recent_entries';
 
         add_action( 'save_post', array(&$this, 'flush_widget_cache') );
         add_action( 'deleted_post', array(&$this, 'flush_widget_cache') );
@@ -350,4 +351,4 @@ class scoutIT_Widget_Recent_Posts extends WP_Widget {
         }
 }
 
- register_widget('scoutIT_Widget_Recent_Posts');    
+ register_widget('WoggleSITheme_Widget_Recent_Posts');    

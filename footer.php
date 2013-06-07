@@ -1,4 +1,4 @@
-<?php   $options = get_option('scout_theme_options'); ?>
+<?php   $options = get_option('WoggleSITheme_theme_options'); ?>
 
     <div class="clear" style="padding-top:10px;"></div>
 <br/>

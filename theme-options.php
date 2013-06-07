@@ -62,7 +62,7 @@ function theme_options_do_page() {
                 <tr><th colspan="2"><h2>Social Media</h2></th></tr>
                 <tr valign="top"><th scope="row">Facebook Profile</th>
                     <td>
-                        <input id="WoggleSITheme_theme_options[facebookUrl]" class="regular-text" type="text" name="WoggleSITheme_theme_options[facebookUrl]" value="<?php echo esc_Url( $options['facebookUrl'] ); ?>" />
+                        <input id="WoggleSITheme_theme_options[facebookUrl]" class="regular-text" type="text" name="WoggleSITheme_theme_options[facebookUrl]" value="<?php echo esc_Url( $options['facebookUrl']); ?>" />
                         <label class="description" for="WoggleSITheme_theme_options[facebookUrl]"><?php _e( 'Leave blank to hide Facebook Icon', 'WoggleSITheme-theme' ); ?></label>
                     </td>
                 </tr> 
@@ -79,12 +79,12 @@ function theme_options_do_page() {
                         <label class="description" for="WoggleSITheme_theme_options[youtubeUrl]"><?php _e( 'Leave blank to hide Youtube Icon', 'WoggleSITheme-theme' ); ?></label>
                     </td>
                 </tr>
-               <!--  <tr valign="top"><th scope="row">Email</th>
+               <!--tr valign="top"><th scope="row">Email</th>
                     <td>
                         <input id="WoggleSITheme_theme_options[emailUrl]" class="regular-text" type="text" name="WoggleSITheme_theme_options[emailUrl]" value="<?php echo esc_Url( $options['emailUrl'] ); ?>" />
                         <label class="description" for="WoggleSITheme_theme_options[emailUrl]"><?php _e( 'Leave blank to hide Email Icon', 'WoggleSITheme-theme' ); ?></label>
                     </td>
-                </tr>  -->
+                </tr--> 
 
                  <tr valign="top"><th scope="row">Show Twitter widget</th>
                     <td>

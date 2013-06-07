@@ -52,7 +52,7 @@
 <div id="header">
         <div id="headerMenu"><?php wp_nav_menu(array('theme_location' => 'header_menu')); ?></div></br/>
         <div id="social">
-            <?php $options = get_option( 'scout_theme_options' ); ?>
+            <?php $options = get_option( 'WoggleSITheme_theme_options' ); ?>
             <?php if ( $options['twitterUrl'] != '' ) : ?>
                 <div id="twitter"><h5><a href="<?php echo $options['twitterUrl']; ?>" title="<?php bloginfo('name')?> <?php _e('on','photologger');?> <?php _e( 'Twitter', 'photologger' ); ?>"><span><?php _e( 'Twitter', 'photologger' ); ?></span></a></h5></div>
             <?php endif; ?>
