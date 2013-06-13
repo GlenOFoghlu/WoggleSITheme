@@ -62,6 +62,9 @@
             <?php if ( $options['youtubeUrl'] != '' ) : ?>
                 <div id="youtube"><h5><a href="<?php echo $options['youtubeUrl']; ?>" title="<?php bloginfo('name')?> <?php _e('on','photologger');?> <?php _e( 'Youtube', 'photologger' ); ?>"><span><?php _e( 'Youtube', 'photologger' ); ?></span></a></h5></div>
             <?php endif; ?>
+            <?php if ( $options['googleUrl'] != '' ) : ?>
+                <div id="google"><h5><a href="<?php echo $options['googleUrl']; ?>" title="<?php bloginfo('name')?> <?php _e('on','photologger');?> <?php _e( 'Google', 'photologger' ); ?>"><span><?php _e( 'Google', 'photologger' ); ?></span></a></h5></div>
+            <?php endif; ?>
          </div>
          <div id="logo">
                     <a href="/"><img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="<?php bloginfo( 'name' ); ?>" /></a>

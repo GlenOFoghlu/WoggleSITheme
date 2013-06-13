@@ -71,12 +71,17 @@ function theme_options_do_page() {
                         <input id="WoggleSITheme_theme_options[twitterUrl]" class="regular-text" type="text" name="WoggleSITheme_theme_options[twitterUrl]" value="<?php echo esc_Url( $options['twitterUrl'] ); ?>" />
                         <label class="description" for="WoggleSITheme_theme_options[twitterUrl]"><?php _e( 'Leave blank to hide Twitter Icon', 'WoggleSITheme-theme' ); ?></label>
                     </td>
-                </tr>
-                
+                </tr>   
                 <tr valign="top"><th scope="row">Youtube Channel</th>
                     <td>
                         <input id="WoggleSITheme_theme_options[youtubeUrl]" class="regular-text" type="text" name="WoggleSITheme_theme_options[youtubeUrl]" value="<?php echo esc_Url( $options['youtubeUrl'] ); ?>" />
                         <label class="description" for="WoggleSITheme_theme_options[youtubeUrl]"><?php _e( 'Leave blank to hide Youtube Icon', 'WoggleSITheme-theme' ); ?></label>
+                    </td>
+                </tr>
+                <tr valign="top"><th scope="row">Google Plus</th>
+                    <td>
+                        <input id="WoggleSITheme_theme_options[googleUrl]" class="regular-text" type="text" name="WoggleSITheme_theme_options[googleUrl]" value="<?php echo esc_Url( $options['googleUrl'] ); ?>" />
+                        <label class="description" for="WoggleSITheme_theme_options[googleUrl]"><?php _e( 'Leave blank to hide Google+ Icon', 'WoggleSITheme-theme' ); ?></label>
                     </td>
                 </tr>
                <!--tr valign="top"><th scope="row">Email</th>

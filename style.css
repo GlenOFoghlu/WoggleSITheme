@@ -187,7 +187,7 @@ a:hover {
 	text-align: right;
 }
 
-#twitter,#facebook,#youtube {
+#twitter,#facebook,#youtube,#google {
 width:32px;
 float:left;
 position:relative;
@@ -196,7 +196,7 @@ display:block;
 margin:0 0 7px 7px;
 }
 
-#twitter h5,#youtube h5,#facebook h5 {
+#twitter h5,#youtube h5,#facebook h5,#google h5 {
 float:left;
 clear:both;
 height:32px;
@@ -205,7 +205,7 @@ margin:0;
 padding:0;
 }
 
-#twitter h5 a:hover,#youtube h5 a:hover,#facebook h5 a:hover {
+#twitter h5 a:hover,#youtube h5 a:hover,#facebook h5 a:hover,,#google h5 a:hover {
 display:block;
 height:32px;
 width:32px;
@@ -213,29 +213,35 @@ background-position:-32px 0;
 text-decoration: none;
 }
 
-#twitter h5 span,#youtube h5 span,#facebook h5 span {
+#twitter h5 span,#youtube h5 span,#facebook h5 span,#google h5 span {
 display:none;
 }
 
 #twitter h5 a {
 display:block;
-height:32px;
-width:32px;
-background:url(_/img/social/twitter.png) top left no-repeat;
+height:34px;
+width:34px;
+background:url(_/img/tw.png) top left no-repeat;
 }
 
 #youtube h5 a {
 display:block;
-height:32px;
-width:32px;
-background:url(_/img/social/youtube.png) top left no-repeat;
+height:34px;
+width:34px;
+background:url(_/img/yt.png) top left no-repeat;
 }
 
 #facebook h5 a {
 display:block;
-height:32px;
-width:32px;
-background:url(_/img/social/facebook.png) top left no-repeat;
+height:34px;
+width:34px;
+background:url(_/img/fb.png) top left no-repeat;
+}
+#google h5 a {
+display:block;
+height:34px;
+width:34px;
+background:url(_/img/go.png) top left no-repeat;
 }
 
 .navigation {
