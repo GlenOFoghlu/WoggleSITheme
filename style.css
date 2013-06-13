@@ -158,6 +158,7 @@ a:hover {
 }
 #groupName{
 	font-size: xx-large;
+	margin-bottom: 0.1em; 
 }
 #groupName a:hover {
 	text-decoration:none;
@@ -183,8 +184,13 @@ a:hover {
 
 #social {
 	float: right;
-	
 	text-align: right;
+}
+
+#SIBranding{
+	 float: right; 
+    margin: 4px; 
+
 }
 
 #twitter,#facebook,#youtube,#google {

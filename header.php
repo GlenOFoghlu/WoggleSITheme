@@ -53,25 +53,28 @@
         <div id="headerMenu"><?php wp_nav_menu(array('theme_location' => 'header_menu')); ?></div></br/>
         <div id="social">
             <?php $options = get_option( 'WoggleSITheme_theme_options' ); ?>
-            <?php if ( $options['twitterUrl'] != '' ) : ?>
-                <div id="twitter"><h5><a href="<?php echo $options['twitterUrl']; ?>" title="<?php bloginfo('name')?> <?php _e('on','photologger');?> <?php _e( 'Twitter', 'photologger' ); ?>"><span><?php _e( 'Twitter', 'photologger' ); ?></span></a></h5></div>
-            <?php endif; ?>
-            <?php if ( $options['facebookUrl'] != '' ) : ?>
-             <div id="facebook"><h5><a href="<?php echo $options['facebookUrl']; ?>" title="<?php bloginfo('name')?> <?php _e('on','photologger');?> <?php _e( 'Facebook', 'photologger' ); ?>"><span><?php _e( 'Facebook', 'photologger' ); ?></span></a></h5></div>
+            <?php if ( $options['googleUrl'] != '' ) : ?>
+                <div id="google"><h5><a href="<?php echo $options['googleUrl']; ?>" title="<?php bloginfo('name')?> <?php _e('on','photologger');?> <?php _e( 'Google', 'photologger' ); ?>" target="_blank"><span><?php _e( 'Google', 'photologger' ); ?></span></a></h5></div>
             <?php endif; ?>
             <?php if ( $options['youtubeUrl'] != '' ) : ?>
-                <div id="youtube"><h5><a href="<?php echo $options['youtubeUrl']; ?>" title="<?php bloginfo('name')?> <?php _e('on','photologger');?> <?php _e( 'Youtube', 'photologger' ); ?>"><span><?php _e( 'Youtube', 'photologger' ); ?></span></a></h5></div>
+                <div id="youtube"><h5><a href="<?php echo $options['youtubeUrl']; ?>" title="<?php bloginfo('name')?> <?php _e('on','photologger');?> <?php _e( 'Youtube', 'photologger' ); ?>" target="_blank"><span><?php _e( 'Youtube', 'photologger' ); ?></span></a></h5></div>
             <?php endif; ?>
-            <?php if ( $options['googleUrl'] != '' ) : ?>
-                <div id="google"><h5><a href="<?php echo $options['googleUrl']; ?>" title="<?php bloginfo('name')?> <?php _e('on','photologger');?> <?php _e( 'Google', 'photologger' ); ?>"><span><?php _e( 'Google', 'photologger' ); ?></span></a></h5></div>
+            <?php if ( $options['twitterUrl'] != '' ) : ?>
+                <div id="twitter"><h5><a href="<?php echo $options['twitterUrl']; ?>" title="<?php bloginfo('name')?> <?php _e('on','photologger');?> <?php _e( 'Twitter', 'photologger' ); ?>" target="_blank"><span><?php _e( 'Twitter', 'photologger' ); ?></span></a></h5></div>
             <?php endif; ?>
+            <?php if ( $options['facebookUrl'] != '' ) : ?>
+             <div id="facebook"><h5><a href="<?php echo $options['facebookUrl']; ?>" title="<?php bloginfo('name')?> <?php _e('on','photologger');?> <?php _e( 'Facebook', 'photologger' ); ?>" target="_blank"><span><?php _e( 'Facebook', 'photologger' ); ?></span></a></h5></div>
+            <?php endif; ?>  
          </div>
          <div id="logo">
                     <a href="/"><img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="<?php bloginfo( 'name' ); ?>" /></a>
             </div>
-                <div id="groupName"><a href="/"><?php bloginfo( 'name' ); ?></a>
+                <div id="groupName"><a href="/">
                     <h1><a href="<?php echo site_Url()?>" title="<?php bloginfo('name')?>"><?php bloginfo('name')?></a></h1>
             </div> 
+            <div id="SIBranding">
+            <img src="http://localhost/wordpress/wp-content/themes/WoggleSITheme/_/img/SI_logoHeader.jpg" width="111px" height="150px"/>
+        </div>
         <br /><br /><br />        
 <!-- TO DO: finish Advertising widget
 <div id="adheader">

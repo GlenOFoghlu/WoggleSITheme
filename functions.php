@@ -40,10 +40,10 @@ function WoggleSITheme_setup() {
     add_theme_support( 'post-thumbnails' );
     
     // Register support for custom header images
-    define( 'HEADER_IMAGE_WIDTH', apply_filters( 'twentyeleven_header_image_width', 111 ) );
+    define( 'HEADER_IMAGE_WIDTH', apply_filters( 'twentyeleven_header_image_width', 150 ) );
     define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'twentyeleven_header_image_height', 150 ) );
     define( 'HEADER_TEXTCOLOR', 'ffffff' );
-    define( 'HEADER_IMAGE', '%s/_/img/SI_logoHeader.jpg' ); // %s is the template dir uri 
+    define( 'HEADER_IMAGE', '%s/_/img/BaysideBadge.png' ); // %s is the template dir uri 
     add_custom_image_header( 'twentyeleven_header_style', 'twentyeleven_admin_header_style', 'twentyeleven_admin_header_image' );
     
     
