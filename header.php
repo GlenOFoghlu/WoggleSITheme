@@ -67,13 +67,13 @@
             <?php endif; ?>  
          </div>
          <div id="logo">
-                    <a href="/"><img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="<?php bloginfo( 'name' ); ?>" /></a>
+                    <a href="<?php echo site_Url()?>"><img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="<?php bloginfo( 'name' ); ?>" /></a>
             </div>
                 <div id="groupName"><a href="/">
                     <h1><a href="<?php echo site_Url()?>" title="<?php bloginfo('name')?>"><?php bloginfo('name')?></a></h1>
             </div> 
             <div id="SIBranding">
-            <img src="http://localhost/wordpress/wp-content/themes/WoggleSITheme/_/img/SI_logoHeader.jpg" width="111px" height="150px"/>
+           <a href="http://www.scouts.ie" target="_blank"> <img src="http://localhost/wordpress/wp-content/themes/WoggleSITheme/_/img/SI_logoHeader.jpg" width="111px" height="150px"/></a>
         </div>
         <br /><br /><br />        
 <!-- TO DO: finish Advertising widget
